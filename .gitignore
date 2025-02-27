@@ -1,0 +1,21 @@
+# Dart & Flutter related
+.dart_tool/
+.packages
+build/
+pubspec.lock
+
+# Mason cache & generated files
+.mason/
+mason-lock.json
+
+# IDE & Editor specific files
+.vscode/
+.idea/
+*.iml
+
+# System-specific files
+.DS_Store
+Thumbs.db
+
+# Logs & temporary files
+*.log
