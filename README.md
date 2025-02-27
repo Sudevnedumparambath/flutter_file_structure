@@ -39,11 +39,12 @@ bricks:
   flutter_structure:
     git:
       url: https://github.com/YOUR_USERNAME/mason-bricks.git
-      path: bricks/flutter_structure
+      path: flutter_structure
   feature:
     git:
       url: https://github.com/YOUR_USERNAME/mason-bricks.git
-      path: bricks/feature
+      path: feature
+
 ```
 
 ### 5. Download structure data
