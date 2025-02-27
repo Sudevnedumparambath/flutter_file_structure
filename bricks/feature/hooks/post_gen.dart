@@ -1,11 +1,19 @@
 import 'dart:io';
+import 'package:mason/mason.dart';
 
-void run() {
-  final gitkeepFile1 = File('lib/.gitkeep');
-  if (gitkeepFile1.existsSync()) {
-    gitkeepFile1.deleteSync();
-  final gitkeepFile2 = File('lib/features/.gitkeep');
-  if (gitkeepFile2.existsSync()) {
-    gitkeepFile2.deleteSync();
+void run(HookContext context) {
+  final filesToDelete = [
+    'lib/.gitkeep',
+    'lib/features/.gitkeep',
+  ];
+
+  for (var filePath in filesToDelete) {
+    final file = File(filePath);
+    if (file.existsSync()) {
+      file.deleteSync();
+      context.logger.info('Deleted: $filePath'); // Logs the deletion
+    }
   }
+
+  context.logger.info('✅ post_gen hook completed!');
 }
