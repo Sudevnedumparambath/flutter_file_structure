@@ -5,21 +5,21 @@ void run(Map<String, dynamic> vars) {
   final featurePath = 'lib/features/$featureName';
 
   // Delete .gitignore files
-  final libGitignore = File('lib/.gitignore');
+  final libGitignore = File('lib/.gitkeep');
   if (libGitignore.existsSync()) {
     libGitignore.deleteSync();
   }
 
-  final featureGitignore = File('$featurePath/.gitignore');
+  final featureGitignore = File('$featurePath/.gitkeep');
   if (featureGitignore.existsSync()) {
     featureGitignore.deleteSync();
   }
 
   // Delete .gitkeep file
-  final gitkeepFile = File('$featurePath/.gitkeep');
-  if (gitkeepFile.existsSync()) {
-    gitkeepFile.deleteSync();
-  }
+  // final gitkeepFile = File('$featurePath/.gitkeep');
+  // if (gitkeepFile.existsSync()) {
+  //   gitkeepFile.deleteSync();
+  // }
 
   print('Deleted .gitignore and .gitkeep files.');
 }
