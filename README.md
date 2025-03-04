@@ -68,7 +68,7 @@ This will generate the entire **Flutter project structure** with pre-configured 
 To add a new feature inside the **features/** folder, run:
 
 ```sh
-mason make feature_brick -o lib/features
+mason make feature
 ```
 
 Then, enter the **feature name** when prompted.
