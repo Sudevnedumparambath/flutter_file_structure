@@ -1,31 +1,25 @@
 import 'dart:io';
 
-void run(HookContext context) {
-  final featureName = context.vars['feature_name'];
+void run(Map<String, dynamic> vars) {
+  final featureName = vars['feature_name'];
   final featurePath = 'lib/features/$featureName';
 
   // Delete .gitignore files
-  final libGitignore = File('lib/.gitkeep');
+  final libGitignore = File('lib/.gitignore');
   if (libGitignore.existsSync()) {
     libGitignore.deleteSync();
   }
 
-  final featureGitignore = File('lib/features/.gitkeep');
+  final featureGitignore = File('$featurePath/.gitignore');
   if (featureGitignore.existsSync()) {
     featureGitignore.deleteSync();
   }
 
   // Delete .gitkeep file
-  // final gitkeepFile = File('$featurePath/.gitkeep');
-  // if (gitkeepFile.existsSync()) {
-  //   gitkeepFile.deleteSync();
-  // }
+  final gitkeepFile = File('$featurePath/.gitkeep');
+  if (gitkeepFile.existsSync()) {
+    gitkeepFile.deleteSync();
+  }
 
   print('Deleted .gitignore and .gitkeep files.');
-}
-
-class HookContext {
-  final Map<String, dynamic> vars;
-
-  HookContext(this.vars);
 }
