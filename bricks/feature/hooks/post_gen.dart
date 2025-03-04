@@ -1,16 +1,16 @@
 import 'dart:io';
 
 void run(Map<String, dynamic> vars) {
-  final featureName = vars['feature_name'];
-  final featurePath = 'lib/features/$featureName';
+  // final featureName = vars['feature_name'];
+  // final featurePath = 'lib/features/$featureName';
 
   // Delete .gitignore files
-  final libGitignore = File('lib/.gitkeep');
+  final libGitignore = File('lib/.gitignore');
   if (libGitignore.existsSync()) {
     libGitignore.deleteSync();
   }
 
-  final featureGitignore = File('$featurePath/.gitkeep');
+  final featureGitignore = File('features/.gitignore');
   if (featureGitignore.existsSync()) {
     featureGitignore.deleteSync();
   }
