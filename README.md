@@ -38,13 +38,12 @@ Add the following code to the mason.yaml file
 bricks:
   flutter_structure:
     git:
-      url: https://github.com/YOUR_USERNAME/mason-bricks.git
-      path: flutter_structure
+      url: https://github.com/Sudevnedumparambath/flutter_file_structure.git
+      path: bricks/flutter_structure
   feature:
     git:
-      url: https://github.com/YOUR_USERNAME/mason-bricks.git
-      path: feature
-
+      url: https://github.com/Sudevnedumparambath/flutter_file_structure.git
+      path: bricks/feature
 ```
 
 ### 5. Download structure data
