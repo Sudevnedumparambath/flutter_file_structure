@@ -84,5 +84,5 @@ Feel free to open an issue or submit a pull request if you have improvements!
 
 This project is licensed under the [MIT License](LICENSE).
 
-**Note:** This respository is a work in progress. I have only added a basic structure. I will be updating this soon ans will be adding more bricks as well as some initial codes in the default files so that it is possible to to work on the application easily.
+**Note:** This respository is a work in progress. I have only added a basic structure. I will be updating this soon and will be adding more bricks as well as some initial codes in the default files so that it is possible to to work on the application easily.
 
